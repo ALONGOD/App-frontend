@@ -18,6 +18,11 @@ import { LoginSignup } from './pages/LoginSignup.jsx'
 import { Login } from './pages/Login.jsx'
 import { Signup } from './pages/Signup.jsx'
 
+import { WomenProducts } from './pages/WomenProducts.jsx'
+import { MenProducts } from './pages/MenProducts.jsx'
+import { ShoesProducts } from './pages/ShoesProducts.jsx'
+import { AccessoriesProducts } from './pages/AccessoriesProducts.jsx'
+
 export function RootCmp() {
     return (
         <div className="main-container">
@@ -41,11 +46,13 @@ export function RootCmp() {
                         <Route index element={<Login />} />
                         <Route path="signup" element={<Signup />} />
                     </Route>
+                    <Route path="women" element={<WomenProducts />} />
+                    <Route path="men" element={<MenProducts />} />
+                    <Route path="shoes" element={<ShoesProducts />} />
+                    <Route path="accessories" element={<AccessoriesProducts />} />
                 </Routes>
             </main>
             <AppFooter />
         </div>
     )
 }
-
-
