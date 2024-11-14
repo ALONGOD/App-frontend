@@ -3,37 +3,34 @@ import { NavLink, Outlet } from 'react-router-dom'
 import PropTypes from 'prop-types'
 
 export function AboutUs() {
-    const [count, setCount] = useState(100)
-
-    function onTellMeMore() {
-        console.log('Telling you more')
-    }
     return (
-        <section>
+        <section className="about-us">
             <h2>About Us</h2>
-            <nav>
-                <NavLink to="team">Team</NavLink> |
-                <NavLink to="vision">Vision</NavLink>
-            </nav>
+            <div className="about-description">
+                <p>
+                    Welcome to our yoga company! We are a family-run business dedicated to promoting wellness and mindfulness through the practice of yoga. Our vision is to create a positive impact in the world by spreading the benefits of yoga to as many people as possible. We believe in the power of yoga to transform lives and bring about a sense of peace and balance.
+                </p>
+                <p>
+                    As a family, we are passionate about what we do and are committed to providing high-quality yoga products and services. We strive to make a difference in the world by encouraging healthy living and supporting our community. Join us on this journey to a better, more mindful world.
+                </p>
+            </div>
 
-            <section>
-                <Outlet />
+            <section className="team">
+                <h3>Our Team</h3>
+                <ul>
+                    <li>Alon Goddard</li>
+                    <li>Tali Goddard</li>
+                </ul>
             </section>
 
-            <SplitPane
-                left={
-                    <Contacts />
-                }
-                right={
-                    <Projects />
-                } />
-
-            <FancyBox onClose={() => console.log('ok, closing')}>
-                <h3>{count.toLocaleString()} Followers</h3>
-                <button onClick={onTellMeMore}>Tell me More</button>
-            </FancyBox>
-
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni aperiam quo veniam velit dolor reprehenderit, laudantium consequatur neque numquam labore quae. Accusamus libero perferendis ducimus? Alias unde hic quisquam doloremque.</p>
+            <section className="vision">
+                <h3>Vision</h3>
+                <ul>
+                    <li>Save the day</li>
+                    <li>Spread some love</li>
+                    <li>Take over the world</li>
+                </ul>
+            </section>
         </section>
     )
 }
@@ -41,10 +38,10 @@ export function AboutUs() {
 export function AboutTeam() {
     return (
         <section>
-            <h2>Best Team</h2>
+            <h2>Our Team</h2>
             <ul>
-                <li>Popo Decaprio </li>
-                <li>Jini Baba</li>
+                <li>Alon Goddard </li>
+                <li>Tali Goddard</li>
             </ul>
         </section>
     )

@@ -1,13 +1,13 @@
-import { Link } from 'react-router-dom'
+import { Link } from 'react-router-dom';
 
 export function ProductPreview({ product }) {
-    return <article className="preview">
-        <header>
-            <Link to={`/product/${product._id}`}>{product.vendor}</Link>
-        </header>
-
-        <p>Speed: <span>{product.speed.toLocaleString()} Km/h</span></p>
-        {product.owner && <p>Owner: <span>{product.owner.fullname}</span></p>}
-        
-    </article>
+    return (
+        <article className="product-preview">
+            <header>
+                <Link to={`/product/${product._id}`}>{product.name}</Link>
+            </header>
+            {/* <img src={product.imgUrl} alt={product.name} /> */}
+            <p>Price: <span>{product.price} NIS</span></p>
+        </article>
+    );
 }
