@@ -10,6 +10,7 @@ import { AdminIndex } from './pages/AdminIndex.jsx'
 
 import { ProductDetails } from './pages/ProductDetails'
 import { UserDetails } from './pages/UserDetails'
+import { Cart } from './pages/Cart'
 
 import { AppHeader } from './cmps/AppHeader'
 import { AppFooter } from './cmps/AppFooter'
@@ -50,6 +51,7 @@ export function RootCmp() {
                     <Route path="men" element={<MenProducts />} />
                     <Route path="shoes" element={<ShoesProducts />} />
                     <Route path="accessories" element={<AccessoriesProducts />} />
+                    <Route path="cart" element={<Cart />} />
                 </Routes>
             </main>
             <AppFooter />

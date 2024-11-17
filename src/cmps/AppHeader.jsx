@@ -22,7 +22,7 @@ export function AppHeader() {
         <header className="app-header full">
             <nav>
                 <NavLink to="/" className="logo">
-                    <img src="https://res.cloudinary.com/dpoa9lual/image/upload/v1731568843/Screenshot_2024-11-14_at_9.19.24_xhqcwh.png" alt="Yoga Products Logo" />
+                <img src="https://res.cloudinary.com/dpoa9lual/image/upload/v1731568843/Screenshot_2024-11-14_at_9.19.24_xhqcwh.png" alt="Yoga Products Logo" />
                 </NavLink>
                 <NavLink to="about">About</NavLink>
                 <NavLink to="product">Products</NavLink>
@@ -32,6 +32,7 @@ export function AppHeader() {
                 <NavLink to="accessories">Accessories</NavLink>
                 <NavLink to="chat">Chat</NavLink>
                 <NavLink to="review">Review</NavLink>
+                <NavLink to="cart">Cart</NavLink>
 
                 {user?.isAdmin && <NavLink to="/admin">Admin</NavLink>}
 
