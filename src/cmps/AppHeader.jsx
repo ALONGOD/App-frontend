@@ -30,8 +30,8 @@ export function AppHeader() {
                 <NavLink to="men">Men</NavLink>
                 <NavLink to="shoes">Shoes</NavLink>
                 <NavLink to="accessories">Accessories</NavLink>
-                <NavLink to="chat">Chat</NavLink>
-                <NavLink to="review">Review</NavLink>
+                {/* <NavLink to="chat">Chat</NavLink> */}
+                {/* <NavLink to="review">Review</NavLink> */}
                 <NavLink to="cart">Cart</NavLink>
 
                 {user?.isAdmin && <NavLink to="/admin">Admin</NavLink>}

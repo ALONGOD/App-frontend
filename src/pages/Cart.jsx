@@ -1,6 +1,7 @@
 import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { removeFromCart } from '../store/actions/cart.actions';
+import PayPalButton from './PayPalButton';
 
 export function Cart() {
     const cart = useSelector(storeState => storeState.cartModule.cart);
@@ -15,17 +16,23 @@ export function Cart() {
     return (
         <section className="cart">
             <h1>Shopping Cart</h1>
-            <ul>
-                {cart.map(item => (
-                    <li key={item._id}>
-                        <p>{item.name}</p>
-                        <p>{item.price} NIS</p>
-                        <button onClick={() => handleRemoveFromCart(item._id)}>Remove</button>
-                    </li>
-                ))}
-            </ul>
-            <h2>Total: {total} NIS</h2>
-            <button>Checkout</button>
+            {cart.length === 0 ? (
+                <p>Your Cart Is Empty</p>
+            ) : (
+                <>
+                    <ul>
+                        {cart.map(item => (
+                            <li key={item._id}>
+                                <p>{item.name}</p>
+                                <p>{item.price} NIS</p>
+                                <button onClick={() => handleRemoveFromCart(item._id)}>Remove</button>
+                            </li>
+                        ))}
+                    </ul>
+                    <h2>Total: {total} NIS</h2>
+                    {total > 0 && <PayPalButton total={total} />}
+                </>
+            )}
         </section>
     );
 }
