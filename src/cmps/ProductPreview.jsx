@@ -17,11 +17,11 @@ export function ProductPreview({ product }) {
 
     return (
         <article className="product-preview">
+            <img src={product.imgUrl} alt={product.name} />
             <header>
                 <Link to={`/product/${product._id}`}>{product.name}</Link>
             </header>
-            <img src={product.imgUrl} alt={product.name} />
-            <p>Price: <span>{product.price} NIS</span></p>
+            <p><span>{product.price}₪</span></p>
             {isInCart ? (
                 <button onClick={handleRemoveFromCart}>Remove from Cart</button>
             ) : (

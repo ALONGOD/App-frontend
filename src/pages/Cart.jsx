@@ -2,6 +2,7 @@ import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { removeFromCart } from '../store/actions/cart.actions';
 import PayPalButton from './PayPalButton';
+import { ProductList } from '../cmps/ProductList';
 
 export function Cart() {
     const cart = useSelector(storeState => storeState.cartModule.cart);
@@ -20,15 +21,11 @@ export function Cart() {
                 <p>Your Cart Is Empty</p>
             ) : (
                 <>
-                    <ul>
-                        {cart.map(item => (
-                            <li key={item._id}>
-                                <p>{item.name}</p>
-                                <p>{item.price} NIS</p>
-                                <button onClick={() => handleRemoveFromCart(item._id)}>Remove</button>
-                            </li>
-                        ))}
-                    </ul>
+                    <ProductList 
+                        products={cart} 
+                        onRemoveProduct={handleRemoveFromCart} 
+                        onUpdateProduct={() => {}} 
+                    />
                     <h2>Total: {total} NIS</h2>
                     {total > 0 && <PayPalButton total={total} />}
                 </>
