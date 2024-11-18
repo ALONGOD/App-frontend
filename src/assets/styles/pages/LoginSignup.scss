@@ -1,47 +1,78 @@
 .login-form,
 .signup-form {
-	display: grid;
-	width: min(80%, 300px);
-	margin: auto;
+    display: grid;
+    width: min(80%, 300px);
+    margin: auto;
+    padding: 1em;
+    background-color: #f0f8ff; // Brighter background color
+    border-radius: 10px; // Rounder shape
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); // Subtle shadow for depth
 
-	padding: 1em;
-	background-color: $clr4;
+    input, select {
+        width: 100%;
+        padding: 0.5em;
+        margin-bottom: 1em;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        font-size: 1em;
+    }
+
+    button {
+        padding: 0.5rem 1rem;
+        background-color: #b3cde0; // Light blue
+        color: #fff;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        transition: background-color 0.3s, transform 0.3s;
+
+        &:hover {
+            background-color: #9bb8d3; // Slightly darker blue
+            transform: translateY(-2px);
+        }
+
+        &:focus {
+            outline: none;
+            box-shadow: 0 0 0 3px rgba(168, 213, 186, 0.5);
+        }
+    }
 }
 
 .signup-form {
-	input {
-		width: 100%;
-	}
-
     .admin-toggle {
         display: flex;
         align-items: center;
         justify-self: start;
 
         span {
-            font-size: .8em;
+            font-size: 0.8em;
         }
     }
 }
 
 .login-page nav {
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	gap: 2em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2em;
+    margin-block: 100px 0.5em;
 
-	margin-block: 100px 0.5em;
+    a {
+        font-size: 1em;
+        color: #00796b; // Brighter color
+        text-decoration: none;
+        padding: 0.5em 1em;
+        border-radius: 4px;
+        transition: color 0.3s, background-color 0.3s;
 
-	a {
-		font-size: 0.8em;
-		color: $clr4;
+        &:hover {
+            color: #fff;
+            background-color: #00796b; // Brighter color on hover
+        }
+    }
 
-		&:hover {
-			color: $clr1;
-		}
-	}
-	a.active {
-		text-decoration: underline;
-		color: $clr2;
-	}
+    a.active {
+        text-decoration: underline;
+        color: #b3cde0; // Light blue
+    }
 }
