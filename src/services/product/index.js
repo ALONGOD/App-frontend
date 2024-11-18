@@ -16,9 +16,8 @@ function getEmptyProduct() {
 function getDefaultFilter() {
     return {
         txt: '',
-        minSpeed: '',
-        sortField: '',
-        sortDir: '',
+        maxPrice: '',
+        category: '',
     }
 }
 

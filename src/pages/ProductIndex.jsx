@@ -19,9 +19,10 @@ export function ProductIndex() {
     // }, [filterBy])
 
     const filteredProducts = products.filter(product => {
+        const productPrice = parseInt(product.price, 10)
         return (
             product.name.toLowerCase().includes(filterBy.txt.toLowerCase()) &&
-            (filterBy.maxPrice === '' || product.price <= filterBy.maxPrice) &&
+            (filterBy.maxPrice === '' || productPrice <= filterBy.maxPrice) &&
             (filterBy.category === '' || product.category === filterBy.category)
         )
     })
