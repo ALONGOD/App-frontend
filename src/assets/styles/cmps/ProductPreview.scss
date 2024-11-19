@@ -1,10 +1,10 @@
 .product-preview {
-    border: 1px solid #ddd;
+    // border: 1px solid #ddd;
     border-radius: 8px;
     padding: 1rem;
     text-align: center;
-    background-color: #fff;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    // background-color: #fff;
+    // box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s, box-shadow 0.3s;
 
     &:hover {
@@ -13,8 +13,8 @@
     }
 
     img {
-        width: 10vw;
-        height: 15vh;
+        width: 12vw;
+        height: 19vh;
         object-fit: cover;
         border-radius: 8px;
         margin-bottom: 1rem;

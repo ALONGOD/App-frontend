@@ -2,8 +2,9 @@
     --min-column-size: 220px;
 
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(var(--min-column-size), 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(var(--min-column-size), max-content));
     gap: .5em;
+    justify-content: center;
 
     li {
         display: grid;
