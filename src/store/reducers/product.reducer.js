@@ -5,6 +5,7 @@ export const ADD_PRODUCT = 'ADD_PRODUCT'
 export const UPDATE_PRODUCT = 'UPDATE_PRODUCT'
 export const ADD_PRODUCT_MSG = 'ADD_PRODUCT_MSG'
 
+
 const initialState = {
      products:[
         { _id: 1, name: 'Yoga Mat', price: '120', imgUrl: 'https://images.pexels.com/photos/4056723/pexels-photo-4056723.jpeg', description: 'High-quality yoga mat for all your yoga needs.', category: 'accessories' },
