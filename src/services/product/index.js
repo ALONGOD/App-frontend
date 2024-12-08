@@ -6,11 +6,15 @@ import { productService as local } from './product.service.local'
 import { productService as remote } from './product.service.remote'
 
 function getEmptyProduct() {
-	return {
-		vendor: makeId(),
-		speed: getRandomIntInclusive(80, 240),
-		msgs: [],
-	}
+    return {
+        // _id: makeId(), // Assuming makeId generates a unique ID
+        name: '',
+        price: 0,
+        imgUrl: '',
+        description: '',
+        category: '',
+        createdAt: new Date().toISOString(), // Set to current date
+    };
 }
 
 function getDefaultFilter() {
@@ -18,7 +22,7 @@ function getDefaultFilter() {
         txt: '',
         maxPrice: '',
         category: '',
-    }
+    };
 }
 
 const service = VITE_LOCAL === 'true' ? local : remote
