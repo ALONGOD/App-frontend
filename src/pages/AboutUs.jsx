@@ -15,13 +15,13 @@ export function AboutUs() {
                 </p>
             </div>
 
-            <section className="team">
+            {/* <section className="team">
                 <h3>Our Team</h3>
                 <ul>
                     <li>Alon Goddard</li>
                     <li>Tali Goddard</li>
                 </ul>
-            </section>
+            </section> */}
 
             <section className="vision">
                 <h3>Vision</h3>
