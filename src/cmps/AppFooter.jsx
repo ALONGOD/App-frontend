@@ -7,5 +7,7 @@ export function AppFooter() {
 		<footer className="app-footer">
 			<p> &copy; Copyright 2024 by Alon Goddard</p>
 		</footer>
+
+
 	)
 }
