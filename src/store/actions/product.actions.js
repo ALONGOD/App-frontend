@@ -12,6 +12,8 @@ export async function loadProducts(filterBy) {
     }
 }
 
+
+
 export async function loadProduct(productId) {
     try {
         const product = await productService.getById(productId)
